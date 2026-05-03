@@ -1,0 +1,129 @@
+# NexT Theme Configuration
+# Docs: https://theme-next.js.org/
+
+# Scheme Settings
+# Muse - 简约明亮风格
+scheme: Muse
+
+# ---------------------------------------------------------------
+# Menu Settings
+# ---------------------------------------------------------------
+menu:
+  home: / || fa fa-home
+  projects: /projects/ || fa fa-folder-open
+  notes: /notes/ || fa fa-sticky-note
+  about: /about/ || fa fa-user
+
+# ---------------------------------------------------------------
+# Social Links
+# ---------------------------------------------------------------
+social:
+  Email: mailto:your-email@gmail.com || fa fa-envelope
+  GitHub: https://github.com/your-username || fa fa-github
+
+social_icons:
+  enable: true
+  icons_only: false
+  transition: false
+
+# ---------------------------------------------------------------
+# TagCloud Settings
+# ---------------------------------------------------------------
+tagcloud:
+  min: 12
+  max: 30
+  amount: 200
+  orderby: name
+  order: 1
+
+# ---------------------------------------------------------------
+# Category & Tag Settings
+# ---------------------------------------------------------------
+category_generator:
+  per_page: 10
+
+tag_generator:
+  per_page: 10
+
+# ---------------------------------------------------------------
+# Sidebar Settings
+# ---------------------------------------------------------------
+sidebar:
+  position: left
+  width: 240
+  display: post
+  offset: 12
+  b2t: false
+  scrollpercent: false
+  onmobile: false
+
+# ---------------------------------------------------------------
+# Avatar Settings
+# ---------------------------------------------------------------
+avatar:
+  url: /images/avatar.gif
+  rounded: true
+  rotated: false
+
+# ---------------------------------------------------------------
+# Code Blocks Settings
+# ---------------------------------------------------------------
+codeblock:
+  highlight_theme: default
+  prism:
+    light: prism
+    dark: prism-dark
+  copy_button:
+    enable: true
+    style: flat
+
+# ---------------------------------------------------------------
+# Back to Top
+# ---------------------------------------------------------------
+back2top:
+  enable: true
+  sidebar: false
+  scrollpercent: true
+
+# ---------------------------------------------------------------
+# Reading Progress
+# ---------------------------------------------------------------
+reading_progress:
+  enable: true
+  position: top
+  color: "#37c6c0"
+  height: 3px
+
+# ---------------------------------------------------------------
+# Mobile Settings
+# ---------------------------------------------------------------
+mobile_layout_economy: true
+android_chrome_color: "#1f1f1f"
+custom_logo: false
+
+# ---------------------------------------------------------------
+# Font Settings
+# ---------------------------------------------------------------
+font:
+  enable: true
+  host: https://fonts.googleapis.com
+  global:
+    external: true
+    family: ""
+    size: 1
+  title:
+    external: true
+    family: ""
+    size:
+  headings:
+    external: true
+    family: ""
+    size:
+  posts:
+    external: true
+    family: ""
+    size:
+  codes:
+    external: true
+    family: ""
+    size:
