@@ -7,13 +7,13 @@ title: 我的个人博客
 subtitle: '记录学习与成长'
 description: '一个程序员的个人博客，分享项目经验和技术笔记'
 keywords: [博客, 技术, 编程, 笔记]
-author: 小亢
+author: XK
 language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://xk664.github.io/personal-blog
+url: https://xk664.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -21,7 +21,7 @@ pretty_urls:
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
 # Directory
-root: /personal-blog/
+root: /
 source_dir: source
 public_dir: public
 tag_dir: tags
@@ -103,6 +103,6 @@ theme: next
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/xk664/personal-blog.git
+  repo: https://github.com/xk664/xk664.github.io.git
   branch: gh-pages
   message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
