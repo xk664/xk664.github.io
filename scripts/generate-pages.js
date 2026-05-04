@@ -33,11 +33,20 @@ hexo.extend.filter.register('after_render:html', function(data) {
 .nl:hover{border-color:#ccc;background:#f0f0f0;transform:translateY(-2px)}
 .nl h3{font-size:16px;color:#222;margin:0 0 6px}
 .nl p{font-size:12px;color:#999;margin:0}
+.header{display:none!important}
+.hp-nav{display:flex;justify-content:center;gap:16px;margin-bottom:36px}
+.hp-nav a{padding:8px 20px;border-radius:8px;font-size:13px;color:#666;text-decoration:none;border:1px solid #eee;background:#f8f9fa;transition:all 0.2s}
+.hp-nav a:hover{background:#f0f0f0;color:#222;border-color:#ddd}
 </style>`;
     const hero = `<div class="hp">
 <img src="${root}images/avatar.jpg" class="hp-avatar" alt="avatar">
 <h1 class="hp-name">XK</h1>
 <p class="hp-sub">后端开发工程师 | Java</p>
+<div class="hp-nav">
+<a href="${root}">首页</a>
+<a href="${root}notes/">笔记</a>
+<a href="${root}projects/">项目</a>
+</div>
 <div class="hp-section">
 <div class="hp-label">联系方式</div>
 <div class="contact-list">
@@ -58,13 +67,9 @@ hexo.extend.filter.register('after_render:html', function(data) {
 <div class="tk"><i class="fa fa-tasks"></i> JUC</div>
 <div class="tk"><i class="fa fa-cogs"></i> JVM</div>
 <div class="tk"><i class="fa fa-envelope-o"></i> RabbitMQ</div>
-</div>
-</div>
-<div class="hp-section">
-<div class="hp-label">导航</div>
-<div class="nav-list">
-<a href="${root}notes/" class="nl"><h3>&#128214; 学习笔记</h3><p>Java 后端开发学习笔记</p></a>
-<a href="${root}projects/" class="nl"><h3>&#128187; 个人项目</h3><p>GitHub 开源项目</p></a>
+<div class="tk"><i class="fa-brands fa-docker"></i> Docker</div>
+<div class="tk"><i class="fa-brands fa-git-alt"></i> Git</div>
+<div class="tk"><i class="fa-brands fa-linux"></i> Linux</div>
 </div>
 </div>
 </div>`;
@@ -115,10 +120,14 @@ hexo.extend.filter.register('after_render:html', function(data) {
 .sidebar{display:none!important}
 .content-wrap{margin-left:0!important}
 .main-inner{max-width:900px;margin:0 auto}
+.header{display:none!important}
 .post-header{display:none}
-.post-block{padding:0}
+.post-block{padding:0;background:transparent!important}
+.container .main-inner{background:transparent!important;padding:0!important}
+.back-home{display:inline-flex;align-items:center;gap:6px;margin-bottom:24px;padding:8px 16px;border-radius:8px;font-size:13px;color:#666;text-decoration:none;border:1px solid #eee;background:rgba(248,249,250,0.9);transition:all 0.2s}
+.back-home:hover{background:#f0f0f0;color:#222;border-color:#ddd}
 .np-wrap{padding:40px 0}
-.np-notice{background:#fafafa;border-left:3px solid #e0e0e0;padding:12px 16px;border-radius:0 8px 8px 0;margin-bottom:30px;font-size:13px;color:#888;line-height:1.8}
+.np-notice{background:rgba(250,250,250,0.9);border-left:3px solid #e0e0e0;padding:12px 16px;border-radius:0 8px 8px 0;margin-bottom:30px;font-size:13px;color:#888;line-height:1.8}
 .np-notice a{color:#444;font-weight:600;border-bottom:1px dashed #999}
 .nc{margin-bottom:24px;background:#f8f9fa;border-radius:12px;border:1px solid #eee;overflow:hidden}
 .nc-hd{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid #eee}
@@ -131,7 +140,8 @@ hexo.extend.filter.register('after_render:html', function(data) {
 .np-date{font-size:12px;color:#aaa;margin-right:16px;flex-shrink:0}
 </style>
 <div class="np-wrap">
-<div class="np-notice">&#9888; 由于没有购买阿里云服务器，部分笔记图片显示不完整，完整笔记请移步 <a href="https://blog.csdn.net/2403_88478303?type=blog" target="_blank">CSDN 博客</a></div>
+<a href="${root}" class="back-home"><i class="fa fa-arrow-left"></i> 返回首页</a>
+<div class="np-notice">&#9888; 由于没有购买阿里云OSS，部分笔记图片显示不完整，完整笔记请移步 <a href="https://blog.csdn.net/2403_88478303?type=blog" target="_blank">CSDN 博客</a></div>
 ${sections}
 </div>`;
     data = data.replace(/<div class="post-body">\s*<\/div>/, `<div class="post-body">${css}</div>`);
@@ -158,8 +168,12 @@ ${sections}
 .sidebar{display:none!important}
 .content-wrap{margin-left:0!important}
 .main-inner{max-width:900px;margin:0 auto}
+.header{display:none!important}
 .post-header{display:none}
-.post-block{padding:0}
+.post-block{padding:0;background:transparent!important}
+.container .main-inner{background:transparent!important;padding:0!important}
+.back-home{display:inline-flex;align-items:center;gap:6px;margin-bottom:24px;padding:8px 16px;border-radius:8px;font-size:13px;color:#666;text-decoration:none;border:1px solid #eee;background:rgba(248,249,250,0.9);transition:all 0.2s}
+.back-home:hover{background:#f0f0f0;color:#222;border-color:#ddd}
 .pj-wrap{padding:40px 0}
 .pc{background:#f8f9fa;border-radius:12px;border:1px solid #eee;padding:24px;margin-bottom:20px;transition:all 0.2s}
 .pc:hover{border-color:#ddd;background:#f0f0f0;transform:translateY(-2px)}
@@ -174,6 +188,7 @@ ${sections}
 .pc-link{display:inline-flex;align-items:center;gap:6px;color:#444;font-size:13px;text-decoration:none;border-bottom:1px dashed #999;transition:all 0.2s}
 .pc-link:hover{color:#222;border-bottom-color:#444}
 </style>
+<a href="${root}" class="back-home"><i class="fa fa-arrow-left"></i> 返回首页</a>
 <div class="pj-wrap">${cards}</div>`;
     data = data.replace(/<div class="post-body">\s*<\/div>/, `<div class="post-body">${css}</div>`);
   }
