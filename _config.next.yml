@@ -1,6 +1,11 @@
 # NexT Theme Configuration
 # Docs: https://theme-next.js.org/
 
+# Favicon
+favicon:
+  small: /images/favicon.jpg
+  medium: /images/favicon.jpg
+
 # Scheme Settings
 scheme: Muse
 
